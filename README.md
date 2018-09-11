@@ -1,4 +1,4 @@
-# error-handling
+# district0x/error-handling
 
 <!-- [![Build Status](https://travis-ci.org/district0x/error-handling.svg?branch=master)](https://travis-ci.org/district0x/error-handling) -->
 
@@ -30,7 +30,7 @@ Include `[district.shared.error-handling]` in your CLJS file. <br>
    (/ 7 n)))
 ```
 
-## Module dependencies
+## Library dependencies
 
 ### [district-server-logging](https://github.com/district0x/district-server-logging)
 `error-handling` requires a configured `district-server-logging` module to function correctly.
