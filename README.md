@@ -16,8 +16,7 @@ Include `[district.shared.error-handling]` in your CLJS file. <br>
 **`try-catch`** <br>
 * wraps around a function body and logs any exception being thrown.
 
-**`number [x]`**
-**try-catch-throw** <br>
+**`try-catch-throw`**
 * wraps around a function body logs any exception being thrown and then re-throws it for further handling.
 
 ## Usage
