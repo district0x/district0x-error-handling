@@ -1,6 +1,6 @@
 (ns district.shared.error-handling
-  (:require [taoensso.timbre :as log]
-            [cljs.core :as cljs]))
+  (:require [taoensso.timbre]
+            [cljs.core]))
 
 (defn- compiletime-info
   [and-env and-form ns]
@@ -13,11 +13,11 @@
   `(try
      ~@body
      (catch js/Object e#
-       (log/error "Unexpected exception" (merge {:error (cljs/ex-message e#)} ~(compiletime-info &env &form *ns*))))))
+       (taoensso.timbre/error "Unexpected exception" (merge {:error (cljs.core/ex-message e#)} ~(compiletime-info &env &form *ns*))))))
 
 (defmacro try-catch-throw [& body]
   `(try
      ~@body
      (catch js/Object e#
-       (log/error "Unexpected exception" (merge {:error (cljs/ex-message e#)} ~(compiletime-info &env &form *ns*)))
+       (taoensso.timbre/error "Unexpected exception" (merge {:error (cljs.core/ex-message e#)} ~(compiletime-info &env &form *ns*)))
        (throw (js/Error. e#)))))
