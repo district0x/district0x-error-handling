@@ -5,7 +5,7 @@
 Clojurescript library with functions aiding in error handling. This library currently utilises [timbre](https://github.com/ptaoussanis/timbre) as a logging library.
 
 ## Installation
-Add `[district0x/error-handling "1.0.0-1"]` into your project.clj.
+Add `[district0x/error-handling "1.0.0-1"]` into your project.clj. <br>
 Include `[district.shared.error-handling]` in your CLJS file. <br>
 <br>
 
