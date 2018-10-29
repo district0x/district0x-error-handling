@@ -1,11 +1,11 @@
 # district0x/error-handling
 
-<!-- [![Build Status](https://travis-ci.org/district0x/error-handling.svg?branch=master)](https://travis-ci.org/district0x/error-handling) -->
-
-Clojurescript library with functions aiding in error handling. This library currently utilises [timbre](https://github.com/ptaoussanis/timbre) as a logging library.
+Clojurescript library with functions aiding in error handling.
+This library currently utilises [timbre](https://github.com/ptaoussanis/timbre) as a logging library.
+You shoud use it in conjunction with the [district-server-logging](https://github.com/district0x/district-server-logging) and [district-ui-logging](https://github.com/district0x/district-ui-logging) modules which setup various logging appenders.
 
 ## Installation
-Add `[district0x/error-handling "1.0.0-1"]` into your project.clj. <br>
+Add `[district0x/error-handling "1.0.1-SNAPSHOT"]` into your project.clj. <br>
 Include `[district.shared.error-handling]` in your CLJS file. <br>
 <br>
 
