@@ -1,0 +1,19 @@
+language: clojure
+script: lein doo node "tests" once
+notifications:
+  slack:
+    on_success: always
+    on_failure: always
+    rooms:
+    - district0x:53vhalUfg0MitsQwzjP5PWdd#travis-ci
+  email: false
+env:
+  global:
+  - secure: V8/e+S8oGAgFM7Qls+vLBt3152zXUp73DHA82LFFVmnYhH5Hd5Ltk5NoSTaecbf9LWf27JcSKiIM7l9SR0W/8Lod7rEKzZ3K8yj/ADjh+1oIpYwIJJmOLExdjmKlVFV/wWK587eRoP399H7OoGfYG0wPc/qWe5gvse2RL7EhUJ+vc7ZBIqal97pvKbYPbpj0yKEkwQkkxtamKiqQdbuVQGUY+/42xzMf6JrUDuz3ne72uapQaFfaqNYTG4yhFynPOvUgC0i7jKOU9By8QL+Pct0XEmHfrXs/DFwsl9+7qiz7y5whz6z1P7iFkaKos/HDZwaKPlkedLNrAMWXrLitaZFZf/sT1zVF0iDFPQch3cO9x9y0/LqW6/xtVNVBqNxua8W6hoPtIdM8cERT6oBHCxlRYLZTUD6O9Wbnwb56pyXZaN3VNm1dMEZKdEZnIAPKLRyTWgDbKpoTqfRxy8vSd0lg37NFW/OExcDVq3i7FX1cogJ4VXMk3k5QieZ0/cKtdi1tusExYTl2/lXgxgqKoPxcNGtG2CpN3aL9AT5/5QhIluLK60JMu8OU3AnnhM9cIP2UCZSyA9aH9Mc7TsrJp67VOCg2unBNFktqqZR4o7fCDHgkdUIP7M3y2vOdNu6RpsItIHsZO8ctjTSJy+pyD1reWHPcXQRNnhYIfb2cjMk=
+  - secure: PINiuen0uD5alkW3sZy/G+lR5Ux3va7AluX3Mqia1iA2piXWK3TJY9TJJRUWGQdjsPhRO6Xyb9zf/mPwieLXDfHUqZ1EG1H7hA3xMnRZlq/neDDygZPSD5tQES2a2BxaZ0n98T4YYLo+mqn/2XxhcELt6+/eJTu0xeu9uXAhmtu6nb4P3vsN4o07kluode61NO9w7ZpTbFnIxu3dnaXHPWf98CWLs9e9IEjqQsbxPG/Fw2hm6U6OA4ZHczgUjMVE7ZNHluFKvEaYISXSmPzSuAtxoTFaf5379qIIFFcgBfe4GI5qlP/M21iygzA9ayNGi1FKQ5XJoJVKnN8cevuld195AjUMYPjLp8b4ThYTYqSpHJ1kMGq1aXZTuOHjC4S5UHWoB5c1SAVciy4esyIYLFVvqN7zcXLv1CMSaiIXK21BjmZKAO6X0WPjM056t30tTZd/6C7WE+znHoc6KhG55EKolqp9rO12zqAegCq0BZneKqBeIciUYRrbkQr2+esdLiRAlkan5Q91NOqtTGbPbHWpU3lmzGwWGyQMHYVM1ao+H2o1wWCF/938LofX9q9j1s4C5ZcAq9rCDZhkdT1bWc7kjVM+fGes/f56fQqC18Uf1NHe/aqAZxTEEapMcOJ1Ilgx/9iazUFNc66GPasmShKIQrprSPzJgmJM/5RrhSo=  
+deploy:
+- provider: script
+  skip_cleanup: true
+  script: lein release :patch
+  on:
+    branch: master

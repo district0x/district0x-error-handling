@@ -2,7 +2,7 @@
   (:require [taoensso.timbre]
             [cljs.core]))
 
-(defn- compiletime-info
+(defn compiletime-info
   [and-env and-form ns]
   (let [meta-info (meta and-form)]
     {:ns (str (ns-name ns))
