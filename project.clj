@@ -1,4 +1,4 @@
-(defproject district0x/error-handling "1.0.2-SNAPSHOT"
+(defproject district0x/error-handling "1.0.3-SNAPSHOT"
   :description "library for error handling"
   :url "https://github.com/district0x/district0x-error-handling"
   :license {:name "Eclipse Public License"

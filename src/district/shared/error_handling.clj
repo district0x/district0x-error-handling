@@ -2,6 +2,9 @@
   (:require [taoensso.timbre]
             [cljs.core]))
 
+(defmacro error? [x]
+  `(cljs.core/instance? js/Error ~x))
+
 (defn compiletime-info
   [and-env and-form ns]
   (let [meta-info (meta and-form)]
