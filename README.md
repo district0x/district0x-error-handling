@@ -5,7 +5,9 @@ This library currently utilises [timbre](https://github.com/ptaoussanis/timbre) 
 You shoud use it in conjunction with the [district-server-logging](https://github.com/district0x/district-server-logging) and [district-ui-logging](https://github.com/district0x/district-ui-logging) modules which setup various logging appenders.
 
 ## Installation
-Add `[district0x/error-handling "1.0.1-SNAPSHOT"]` into your project.clj. <br>
+Add into your project.clj: <br>
+[![Clojars Project](https://img.shields.io/clojars/v/district0x/error-handling.svg)](https://clojars.org/district0x/error-handling)
+
 Include `[district.shared.error-handling]` in your CLJS file. <br>
 <br>
 
@@ -30,6 +32,8 @@ Include `[district.shared.error-handling]` in your CLJS file. <br>
 ## Library dependencies
 
 ### [district-server-logging](https://github.com/district0x/district-server-logging)
-`error-handling` requires a configured `district-server-logging` module to function correctly.
-Depending on where the code is run and how the logging is configured your errors will be reported to the browser, node.js console, filebeat consumed file, [sentry](https://sentry.io) etc.
-For possible configuration options please see [district-server-logging](https://github.com/district0x/district-server-logging). <br>
+
+`error-handling` requires a configured `district-server-logging` and/or `district-ui-logging` modules to function correctly.
+Depending on where the code is run and how the logging is configured your errors will be reported to the browser, node.js console, log file, [sentry](https://sentry.io) etc. <br>
+
+For possible configuration options please see [district-server-logging](https://github.com/district0x/district-server-logging) and [district-ui-logging](https://github.com/district0x/district-ui-logging).
