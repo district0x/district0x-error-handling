@@ -1,5 +1,5 @@
 language: clojure
-script: lein doo node "tests" once
+script: lein test
 notifications:
   slack:
     on_success: always
