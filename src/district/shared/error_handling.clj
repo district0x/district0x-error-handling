@@ -16,11 +16,15 @@
   `(try
      ~@body
      (catch js/Object e#
-       (taoensso.timbre/error "Unexpected exception" (merge {:error e#} ~(compiletime-info &env &form *ns*))))))
+       (taoensso.timbre/error "Unexpected exception" (merge {:error e#}
+                                                            (ex-data e#)
+                                                            ~(compiletime-info &env &form *ns*))))))
 
 (defmacro try-catch-throw [& body]
   `(try
      ~@body
      (catch js/Object e#
-       (taoensso.timbre/error "Unexpected exception" (merge {:error e#} ~(compiletime-info &env &form *ns*)))
+       (taoensso.timbre/error "Unexpected exception" (merge {:error e#}
+                                                            (ex-data e#)
+                                                            ~(compiletime-info &env &form *ns*)))
        (throw (js/Error. e#)))))
